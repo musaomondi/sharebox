@@ -8,8 +8,10 @@
     <%= yield(:head) %>
   </head>
   <body>
-      <div>
-          <%= link_to "sharebox", root_url %>
+      <div class="header_wrapper"> 
+          <div class="logo"> 
+              <%= link_to "ShareBox", root_url %> 
+          </div> 
       </div>
       <div id="login_user_status"> 
           <% if user_signed_in? %> 
@@ -24,8 +26,8 @@
           <% end %> 
       </div>
       <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
