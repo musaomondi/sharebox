@@ -18,6 +18,7 @@ gem 'foundation-rails'
 gem 'jquery-validation-rails'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug', platform: :mri
